@@ -189,7 +189,7 @@ if page=='Dashboard':
     
     col_chart1, col_chart2 = st.columns((2,1))
     with col_chart1:
-        x = pd.date_range(datetime.now(), periods=24, freq='H')
+        x = pd.date_range(datetime.now(), periods=24, freq='h')
         y = np.random.randint(40,140,24)
         fig = px.area(x=x, y=y, title='24-Hour Regional PM2.5 Toxicity Trend', markers=True, color_discrete_sequence=['#2962ff'])
         fig.update_traces(fillcolor='rgba(41, 98, 255, 0.15)', line=dict(width=3, color='#2962ff'), marker=dict(size=6, color='#2962ff'))
