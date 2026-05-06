@@ -272,7 +272,7 @@ elif page=='Live Monitor':
     st.markdown("<p style='color:#94a3b8; font-size:16px; margin-bottom:24px;'>Real-time multipoint sensor readings and active risk monitoring.</p>", unsafe_allow_html=True)
     
     # Generate realistic multi-sensor data
-    t = pd.date_range(datetime.now(), periods=30, freq='T')
+    t = pd.date_range(datetime.now(), periods=30, freq='min')
     data = pd.DataFrame({
         'Time': t,
         'PM2.5 Level': np.random.normal(45, 10, 30),
